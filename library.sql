@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Feb 11, 2025 alle 10:33
+-- Creato il: Feb 17, 2025 alle 22:13
 -- Versione del server: 10.4.32-MariaDB
 -- Versione PHP: 8.2.12
 
@@ -40,7 +40,8 @@ INSERT INTO `authors` (`id`, `name`) VALUES
 (1, 'Italo Calvino'),
 (2, 'Umberto Eco'),
 (3, 'Elena Ferrante'),
-(4, 'Dante Alighieri');
+(4, 'Dante Alighieri'),
+(7219, 'Jane Austen');
 
 -- --------------------------------------------------------
 
@@ -67,9 +68,10 @@ INSERT INTO `books` (`id`, `title`, `author_id`, `publication_year`, `is_availab
 (3, 'Il nome della rosa', 2, 1980, 1, 'src/ilnomedellarosa.jpg'),
 (4, 'L’isola del giorno prima', 2, 1320, 1, 'src/lisoladelgiorno.jpg'),
 (5, 'L’amica geniale', 3, 2011, 1, 'src/lamica.jpg'),
-(6, 'Inferno', 4, 1320, 1, 'src/inferno.JPG'),
+(6, 'Inferno', 4, 1320, 1, 'src/inferno.jpg'),
 (7, 'Purgatorio', 4, 1320, 1, 'src/purgatorio.jpg'),
-(8, 'Paradiso', 4, 1320, 1, 'src/paradiso.jpg');
+(8, 'Paradiso', 4, 1320, 1, 'src/paradiso.jpg'),
+(19, 'Orgoglio e Pregiudizio', 7219, 1813, 1, 'src/default.jpg');
 
 -- --------------------------------------------------------
 
@@ -223,7 +225,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('lajzAmzdMuFZ9SOtYXjP2TDzvyRr02hAKkYm3ckS', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZFNtclZDblNHWHltOThiRkIyNUlUZ3llS0dJYkJLaEF1d3Fjdm41VyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjU6Imh0dHA6Ly9saWJyYXJ5LnRlc3QvYm9va3MiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1739232346);
+('epJhPziOcNkjBGgP0kKkvkz505bCNxZcoW91Vxtf', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Herd/1.14.0 Chrome/120.0.6099.291 Electron/28.2.5 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoic1llbmJTdnNTUlNPYkRaVnY3QXlyeTlVSlpqdHBZanNQNUdoNVcwcCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly9saWJyYXJ5LnRlc3QvP2hlcmQ9cHJldmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1739821719),
+('rDetQv0z5dFfAK6FhmJA7mHN4u7OGiCcFMiiyAim', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidDJBWk9nZTZiVFpDbFJ5WFByYnBSRVdNNG5CUmZySjgzeUhRbFdEdyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjU6Imh0dHA6Ly9saWJyYXJ5LnRlc3QvYm9va3MiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1739826770);
 
 -- --------------------------------------------------------
 
@@ -333,13 +336,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT per la tabella `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7220;
 
 --
 -- AUTO_INCREMENT per la tabella `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT per la tabella `failed_jobs`
